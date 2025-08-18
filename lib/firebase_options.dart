@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -50,19 +47,29 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAzMR7HzVVMjPsIVkv6_sdnkK7fj_mz8uY',
-    appId: '1:829511259468:android:609ef3ebfedbf8e1a3ebe9',
-    messagingSenderId: '829511259468',
-    projectId: 'ostadfirebase-3a719',
-    storageBucket: 'ostadfirebase-3a719.firebasestorage.app',
+    apiKey: 'AIzaSyCaK2FhTT3LmC2Ljt2UIsYukGadSrNs0pc',
+    appId: '1:630177566427:android:c0115706da786a97cd46fe',
+    messagingSenderId: '630177566427',
+    projectId: 'ostadfirebase-c93c2',
+    storageBucket: 'ostadfirebase-c93c2.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyANM1ZSHg5e8-2c6RcSvq6h6mKkALHjpj0',
-    appId: '1:829511259468:ios:c15fda9176e19fd3a3ebe9',
-    messagingSenderId: '829511259468',
-    projectId: 'ostadfirebase-3a719',
-    storageBucket: 'ostadfirebase-3a719.firebasestorage.app',
+    apiKey: 'AIzaSyCAAcaDroon530EermAgNHBjCgoO-JNReA',
+    appId: '1:630177566427:ios:9af2424ae90bf0b8cd46fe',
+    messagingSenderId: '630177566427',
+    projectId: 'ostadfirebase-c93c2',
+    storageBucket: 'ostadfirebase-c93c2.firebasestorage.app',
     iosBundleId: 'wpdevusa.com.ostadFirebase',
   );
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyDWcbDE_5O47EXslL4dlv5hG3oQx_gJUoI',
+    appId: '1:630177566427:web:78dcca8d36b7639acd46fe',
+    messagingSenderId: '630177566427',
+    projectId: 'ostadfirebase-c93c2',
+    authDomain: 'ostadfirebase-c93c2.firebaseapp.com',
+    storageBucket: 'ostadfirebase-c93c2.firebasestorage.app',
+  );
+
 }

@@ -1,32 +1,13 @@
 {
   "project_info": {
-    "project_number": "829511259468",
-    "project_id": "ostadfirebase-3a719",
-    "storage_bucket": "ostadfirebase-3a719.firebasestorage.app"
+    "project_number": "630177566427",
+    "project_id": "ostadfirebase-c93c2",
+    "storage_bucket": "ostadfirebase-c93c2.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:829511259468:android:dbe1e44a4a76285aa3ebe9",
-        "android_client_info": {
-          "package_name": "com.ostad.ostad_task_manager"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAzMR7HzVVMjPsIVkv6_sdnkK7fj_mz8uY"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:829511259468:android:609ef3ebfedbf8e1a3ebe9",
+        "mobilesdk_app_id": "1:630177566427:android:c0115706da786a97cd46fe",
         "android_client_info": {
           "package_name": "wpdevusa.com.ostad_firebase"
         }
@@ -34,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAzMR7HzVVMjPsIVkv6_sdnkK7fj_mz8uY"
+          "current_key": "AIzaSyCaK2FhTT3LmC2Ljt2UIsYukGadSrNs0pc"
         }
       ],
       "services": {
