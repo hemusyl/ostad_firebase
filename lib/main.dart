@@ -95,6 +95,33 @@ class _HomeScreenState extends State<HomeScreen> {
                 LiveScore liveScore = _listOfScore[index];
 
                 return ListTile(
+
+                  onLongPress: () async {
+                    final confirm = await showDialog<bool>(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text("Confirm Delete"),
+                          content: Text("Are you sure you want to delete this item?"),
+                          actions: [
+                            TextButton(
+                              onPressed: () => Navigator.of(context).pop(false), // No
+                              child: Text("No"),
+                            ),
+                            TextButton(
+                              onPressed: () => Navigator.of(context).pop(true), // Yes
+                              child: Text("Yes"),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+
+                    if (confirm == true) {
+                      db.collection('football').doc(liveScore.id).delete();
+                    }
+                  },
+
                   leading: CircleAvatar(
                     radius: 8,
                     backgroundColor: liveScore.isRunning ? Colors.green : Colors.grey,
@@ -123,7 +150,24 @@ class _HomeScreenState extends State<HomeScreen> {
             );
           }
       ),
+      floatingActionButton: FloatingActionButton(onPressed: () async {
+
+        LiveScore liveScore = LiveScore(
+          id: 'spnvssau',
+          team1Name: 'Spain',
+          team2Name: 'Saudi',
+          team1Score: 3,
+          team2Score:2,
+          isRunning: true,
+          winnerTeam: '',
+        );
+
+        await db.collection('football')
+        .doc(liveScore.id)
+            .set(liveScore.toMap());
+      }, child: Icon(Icons.add),),
     );
+    
   }
 }
 
@@ -145,4 +189,15 @@ class LiveScore {
     required this.isRunning,
     required this.winnerTeam,
   });
+
+  Map<String, dynamic> toMap(){
+    return {
+      'team1_name': team1Name,
+      'team2_name': team2Name,
+      'team1_score': team1Score,
+      'team2_score': team2Score,
+      'is_running': isRunning,
+      'winner_team': winnerTeam,
+    };
+  }
 }
