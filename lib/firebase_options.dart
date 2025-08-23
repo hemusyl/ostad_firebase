@@ -47,16 +47,16 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCaK2FhTT3LmC2Ljt2UIsYukGadSrNs0pc',
-    appId: '1:630177566427:android:c0115706da786a97cd46fe',
+    apiKey: '',
+    appId: '1:630177566427:android:',
     messagingSenderId: '630177566427',
     projectId: 'ostadfirebase-c93c2',
     storageBucket: 'ostadfirebase-c93c2.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCAAcaDroon530EermAgNHBjCgoO-JNReA',
-    appId: '1:630177566427:ios:9af2424ae90bf0b8cd46fe',
+    apiKey: '',
+    appId: '1:630177566427:ios:',
     messagingSenderId: '630177566427',
     projectId: 'ostadfirebase-c93c2',
     storageBucket: 'ostadfirebase-c93c2.firebasestorage.app',
@@ -64,8 +64,8 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDWcbDE_5O47EXslL4dlv5hG3oQx_gJUoI',
-    appId: '1:630177566427:web:78dcca8d36b7639acd46fe',
+    apiKey: '',
+    appId: '1:630177566427:web:',
     messagingSenderId: '630177566427',
     projectId: 'ostadfirebase-c93c2',
     authDomain: 'ostadfirebase-c93c2.firebaseapp.com',
